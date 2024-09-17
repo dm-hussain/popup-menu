@@ -254,6 +254,16 @@ form input:focus {
     left: -200px;
   }
 
+  .close-icon {
+    font-size: 26px;
+    font-weight: 700;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+  }
+
   .card-img {
     top: -35px;
     left: 35px;

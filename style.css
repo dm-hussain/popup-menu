@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #decdac;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.popup-box {
+  position: relative;
+  width: 690px;
+  height: 346px;
+  /* padding: 120px 140px; */
+  background-image: url(./images/car.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 2px 0 rgba(0, 00, 0, 0.3);
+  border-radius: 20px;
+}
+
+.news-letter {
+  /* width: 280px; */
+  /* height: 60px; */
+  padding: 6px 20px;
+  /* line-height: 60px; */
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: 'Heebo';
+  color: #ffffff;
+  font-size: 28px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  /* text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.5); */
+}
+
+.close-icon {
+  font-size: 26px;
+  font-weight: 700;
+  position: absolute;
+  right: 30px;
+  top: 21px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+footer {
+  position: absolute;
+  bottom: 25px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  color: #858585;
+  font-size: 10px;
+  display: none;
+}
+
+.popup-btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 10px;
+  background-color: purple;
+  color: white;
+}
+
+.container {
+  position: fixed;
+  top: -110px;
+  left: -200px;
+  scale: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.popup-open .container {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.body-opacity {
+  background-color: #151313b2;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.popup-open footer {
+  display: block;
+  color: #ebbf53;
+}
+
+.hide {
+  display: none;
+}
+
+.card-img {
+  position: absolute;
+  top: -60px;
+  left: 60px;
+  width: 210px;
+  height: 210px;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url(./images/dm.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card-text {
+  font-family: 'Inika';
+  color: #ffffff;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
+
+.card-text h3 {
+  font-size: 40px;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+.card-text p {
+  color: #0cf5ed;
+  font-size: 18px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+form {
+  width: 560px;
+  height: 56px;
+  display: flex;
+  position: absolute;
+  bottom: 56px;
+  left: 66px;
+}
+
+form input {
+  width: 380px;
+  height: 100%;
+  background-color: #eee8dd;
+  border: none;
+  border-top-left-radius: 28px;
+  border-bottom-left-radius: 28px;
+  font-size: 18px;
+  padding: 15px 28px;
+  /* border: 1px solid #AFA187; */
+  border-left: 1px solid #afa187;
+  border-top: 1px solid #afa187;
+  border-bottom: 1px solid #afa187;
+}
+
+form button {
+  font-family: 'Heebo';
+  color: #fefaf3;
+  width: 180px;
+  height: 100%;
+  background-color: #ebbf53;
+  border: none;
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 28px;
+  font-size: 18px;
+  padding: 15px 28px;
+  cursor: pointer;
+}
+
+form input:focus {
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  .popup-box {
+    width: 500px;
+    height: 251px;
+  }
+
+  .news-letter {
+    font-size: 25px;
+  }
+}
+
+/* ********************************************* */
+
+@media (max-width: 768px) {
+  .popup-box {
+    width: 400px;
+    height: 201px;
+  }
+
+  .news-letter {
+    font-size: 20px;
+  }
+
+  .container {
+    top: -110px;
+    left: -200px;
+  }
+
+  .card-img {
+    top: -35px;
+    left: 35px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+
+  .card-text {
+    font-family: 'Inika';
+    color: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+  }
+
+  .card-text h3 {
+    font-size: 20px;
+  }
+
+  .card-text p {
+    font-size: 10px;
+  }
+
+  form {
+    width: 280px;
+    height: 28px;
+
+    bottom: 28px;
+    left: 66px;
+  }
+
+  form input {
+    width: 190px;
+    height: 100%;
+
+    font-size: 10px;
+    padding: 10px 14px;
+    /* border: 1px solid #AFA187; */
+    border-left: 1px solid #afa187;
+    border-top: 1px solid #afa187;
+    border-bottom: 1px solid #afa187;
+  }
+
+  form button {
+    width: 90px;
+    height: 100%;
+
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-letter {
+    font-size: 16px;
+  }
+
+  .popup-box {
+    width: 300px;
+    height: 150px;
+  }
+}
